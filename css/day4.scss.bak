@@ -1,0 +1,125 @@
+$text_color: white;
+$border_color: white;
+$anim_duration: 3s;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
+
+@mixin text {
+   
+ font-family: 'Lato';
+ color:$text_color;
+ text-transform: uppercase;
+ font-size:1em;
+ letter-spacing:1.5px;
+ text-align:center;
+ width:90px;
+ margin-top:20px;
+ -webkit-animation: fade 2s infinite;}
+
+
+html {
+ background-color:#27ae60;
+}
+
+h1 {
+@include text;
+}
+
+.container {
+  width:110px;
+  padding-top:180px;
+  margin:auto;
+  vertical-align: middle;
+}
+
+.ex {
+ @include text;
+ font-family:'flamenco';
+ font-size:4em;
+ width: 40px;
+ height:40px;
+ margin-top:-17px;
+ display:inline-block;
+ border:4px double $border_color;
+}
+
+.ex:nth-child(1) {  
+  -webkit-animation: spin1 $anim_duration infinite 1s;
+  -webkit-transform-origin:50% 52%;
+  margin-left:10px;
+}
+.ex:nth-child(2) {  
+  -webkit-animation: spin2 $anim_duration infinite 1s;
+  -webkit-transform-origin:50% 52%;
+   margin-left:-20px;
+}
+.ex:nth-child(3) { 
+  -webkit-animation: spin2 $anim_duration infinite 1s;
+  -webkit-transform-origin:50% 52%;
+    margin-left:10px;
+} 
+.ex:nth-child(4) {  
+   margin-left:-1px;
+   -webkit-animation: spin1 $anim_duration infinite 1s;
+   -webkit-transform-origin:50% 52%;
+    margin-left:-20px;
+
+}
+
+// spin1
+
+@mixin spin1 {
+  0%{-webkit-transform:rotate(0deg)};
+  100%{-webkit-transform:rotate(360deg)};
+  
+}
+@-webkit-keyframes spin1 {
+  @include spin1; 
+  }
+@-moz-keyframes spin1 {
+   @include spin1; 
+}
+@-o-keyframes spin1 {
+     @include spin1; 
+}
+@keyframes spin1 {
+     @include spin1; 
+}
+//spin 2
+
+@mixin spin2 {
+  0%{-webkit-transform:rotate(0deg)};
+  100%{-webkit-transform:rotate(-360deg)};
+  
+}
+@-webkit-keyframes spin2 {
+  @include spin2; 
+  }
+@-moz-keyframes spin2 {
+   @include spin2; 
+}
+@-o-keyframes spin2 {
+     @include spin2; 
+}
+@keyframes spin2 {
+     @include spin2; 
+}
+
+
+//Fading text
+@mixin fade {
+   50%{opacity:0.5};
+  100%{opacity:1};
+}
+@-webkit-keyframes fade {
+  @include fade; 
+  }
+@-moz-keyframes fade {
+   @include fade; 
+}
+@-o-keyframes fade {
+     @include fade; 
+}
+@keyframes fade {
+     @include fade; 
+}
