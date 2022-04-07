@@ -1,0 +1,80 @@
+html{
+    font-family: "poppinf",sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1180px;
+    margin: auto;
+}
+.logo{
+    width: 100px;
+    float:left;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    margin:0  215px;
+}
+nav ul li a:hover{
+    text-emphasis: none;
+}
+.active{
+    margin-left: 20px;
+    border-radius: 10px;
+    text-decoration: underline;
+}
+.price{
+    color: red;
+}
+.menu{
+    max-height: 400px;
+}
+.img{
+    border: 1px;
+    display: inline-block;
+    margin-right: 10px ;
+    margin-block: 5px;
+     float: left;
+}
+.piture{
+ margin-left: 150px;
+}
+
+.left-container{
+    float: left;
+}
+.right-container{
+    display: flex;
+}
+.hu:hover{
+    transform: scale(1.1);
+    transition: 0.4;
+}
+.hu{
+    width: 250px;
+    border-radius: 5px;
+}
+.huuu{
+    width: 200px;
+
+}
+section{
+    background: #F6F3ED;
+    margin: 10px;
+    padding: 20px;
+    border: 1px dotted maroon;
+    width: 240px;
+}
+.hi{
+    border-radius: 5px;
+}
+
